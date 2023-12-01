@@ -11,9 +11,11 @@ export default {
       colors: {
         "primary": "#003c35",
         "secondary": "#088908",
+        'white': '#f8fafc',
       },
       fontFamily: {
-        title: ['Asap', 'sans-serif']
+        title: ['Asap', 'sans-serif'],
+        sans: ['Open Sans', 'sans-serif'],
       }
     },
   },
