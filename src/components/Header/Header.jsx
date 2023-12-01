@@ -7,7 +7,7 @@ const Header = () => {
     const [openCatg, setOpenCatg] = useState(false);
 
     return (
-        <div className="text-white bg-primary font-title fixed top-0 left-0 right-0 h-15 shadow-md py-4">
+        <div className="text-white bg-primary font-title fixed top-0 left-0 right-0 h-15 shadow-md py-4 z-[99]">
             <div className="flex justify-between px-10">
                 <h1 className="">FABILOGO</h1>
 
@@ -28,9 +28,9 @@ const Header = () => {
             </div>
 
             {/* SEARCH */}
-            <div className={`fixed top-[3.9rem] min-w-full text-gray-500 transition-opacity duration-100 ${openSearch ? 'opacity-100' : 'opacity-0 pointer-events-none'} shadow-md`}>
+            <div className={`fixed bg-white/95 top-[3.9rem] min-w-full text-gray-500 transition-opacity duration-100 ${openSearch ? 'opacity-100' : 'opacity-0 pointer-events-none'} shadow-md`}>
                 <div className="mx-10 mt-1 mb-4 text-center">
-                    <input type="text" placeholder="Buscar las Chikiplantas" className="border-b-2 border-primary min-w-full mt-1 mb-3 outline-none p-2" />
+                    <input type="text" placeholder="Buscar las Chikiplantas" className="border-b-2 bg-transparent border-primary min-w-full mt-1 mb-3 outline-none p-2" />
 
                     <div className="leading-10 mx-2 text-left">
                         <h1 className="">RESULTADOS</h1>
