@@ -68,7 +68,7 @@ const Header = () => {
                     </div>
 
                     {/* MENÚ CATEGORIAS */}
-                    <div className={`text-center py-4 bg-primary overflow-hidden transition-opacity ${openCatg && "hidden"}`} >
+                    <div className={`text-center py-4 bg-primary overflow-hidden transition-opacity ${!openCatg && "hidden"}`} >
                         <ul>
                             <li className="mb-3">Plantas de interior</li>
                             <li className="mb-3">Plantas de exterior</li>
