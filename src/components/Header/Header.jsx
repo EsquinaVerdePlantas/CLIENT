@@ -34,7 +34,7 @@ const Header = () => {
     }
 
     return (
-        <div className="md:items-center text-white bg-primary font-title fixed top-0 left-0 right-0 h-16 shadow-md py-4 z-[99] lg:h-20">
+        <header className="md:items-center text-white bg-primary font-title fixed top-0 left-0 right-0 h-16 shadow-md py-4 z-[99] lg:h-20">
             <div className="flex items-center content-center justify-between md:px-20 sm: px-6 lg:px-24">
                 <h1 className="items-center">FABILOGO</h1>
 
@@ -65,7 +65,7 @@ const Header = () => {
 
             {/* Menú Responsive */}
             <ResponsiveMenu open={open} closeMenu={closeMenu} toggleCategories={toggleCategories} openCatg={openCatg} />
-        </div>
+        </header>
     );
 };
 
