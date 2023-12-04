@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 const ResponsiveMenu = ({ open, closeMenu, toggleCategories, openCatg }) => {
     return (
-        <div className={`cursor-pointer md:overflow-hidden transition-all duration-300 bg-primary min-h-screen fixed top-0 right-0 shadow-md py-4 ${open ? "w-3/4" : "w-0"} lg:hidden`} >
+        <div className={`cursor-pointer sm: overflow-hidden md:overflow-hidden transition-all duration-300 bg-primary min-h-screen fixed top-0 right-0 shadow-md py-4 ${open ? "w-3/4" : "w-0"} lg:hidden`} >
             <div className="text-end px-5">
 
                 <button className="mr-5 mb-7" onClick={closeMenu}>
@@ -19,7 +19,7 @@ const ResponsiveMenu = ({ open, closeMenu, toggleCategories, openCatg }) => {
 
                 {/* Menú Categorías */}
                 <div className="flex justify-center gap-4 text-xl py-4 list hover:bg-green-900 mb-3 transition-all duration-200" onClick={toggleCategories}>
-                    <h3 className="overflow-hidden">
+                    <h3>
                         Categorías
                     </h3>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className={`w-6 h-6 transform ${openCatg ? 'rotate-180' : 'rotate-0'} duration-100`}>
@@ -39,7 +39,7 @@ const ResponsiveMenu = ({ open, closeMenu, toggleCategories, openCatg }) => {
 
                 <div className="flex justify-center gap-4 text-xl py-4 list hover:bg-green-900 mb-3 transition-all duration-200" onClick={closeMenu}>
                     <Link to="">
-                        <h3 className="overflow-hidden">
+                        <h3>
                             Mi Carrito
                         </h3>
                     </Link>
