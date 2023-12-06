@@ -14,9 +14,13 @@ export default {
         'white': '#f8fafc',
       },
       fontFamily: {
-        title: ['Asap', 'sans-serif'],
+        asap: ['Asap', 'sans-serif'],
         sans: ['Open Sans', 'sans-serif'],
-      }
+        aBeeZee: ['ABeeZee','sans-serif']
+      },
+      spacing: {
+        'container': '75rem',
+      },
     },
   },
   plugins: [],
