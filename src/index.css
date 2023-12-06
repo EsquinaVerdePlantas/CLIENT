@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*Estilos reutilizables*/
+@layer components {
+    .btnPrimary{
+        @apply bg-secondary text-white p-4 rounded-md transition duration-100 
+    }
+
+    .btnPrimary:hover{
+        background-color: #27740b;
+    }
+}
