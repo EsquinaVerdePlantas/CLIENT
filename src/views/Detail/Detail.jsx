@@ -16,13 +16,18 @@ const data =
 const Detail = () => {
 
     const [mainImage, setMainImage] = useState(data.image[0])
+    const [imgSelected, setImageSelected] = useState(0);
+    const [valueInput, setValueInput] = useState(1);
 
-    const showImage = (smallImg) => {
-        setMainImage(smallImg.src);
-        smallImg.classList.toggle("opacity-50");
-        
+    const showImage = (index) => {
+        const imagen = document.getElementById(`${index}`);
+        setMainImage(imagen.src);
+        setImageSelected(index)
     }
 
+    const handleInput = (event) => {
+        setValueInput(event.target.value);
+    }
 
     return (
         <section className="w-[90%] lg:w-container mx-auto py-8 flex flex-col gap-8 md:flex-row">
@@ -33,7 +38,7 @@ const Detail = () => {
                 <ul className="w-full flex gap-2 md:w-24 md:flex-col">
                    { data.image.map((img, index) => (
                         <li className="h-24 w-full md:h-20">
-                            <img key={index}  id={index} src={img} className="w-full h-full object-cover" alt={data.name} onClick={() => showImage(document.getElementById(`${index}`))}/>
+                            <img key={index}  id={index} src={img} className={`w-full h-full object-cover ${index === imgSelected ? "opacity-50" : ""}`} alt={data.name} onClick={() => showImage(index)}/>
                         </li>
                         )
                     )}
@@ -44,7 +49,7 @@ const Detail = () => {
                 <span className="font-sans text-2xl text-secondary block mb-8">S/ 265.00</span>
                 <p className="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi eum obcaecati quasi a ipsam dignissimos deleniti, omnis labore dolorem? Quae perspiciatis iste vero possimus quisquam debitis corrupti facere ex quia!</p>
                 <div className="flex gap-4">
-                    <input className="border border-slate-300 p-4 w-20 rounded-md" type="number" placeholder="0"/>
+                    <input className="border border-slate-300 p-4 w-20 rounded-md" type="number" onChange={handleInput} value={valueInput}/>
                     <button className="btnPrimary w-full">Agregar al Carrito</button>
                 </div>
             </div>
