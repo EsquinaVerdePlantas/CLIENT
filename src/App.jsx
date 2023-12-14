@@ -10,12 +10,11 @@ import OutdoorPlants from "./views/Category/OutdoorPlants.jsx";
 import Detail from "./views/Detail/Detail";
 import ShoppingCart from "./views/ShoppingCart/ShoppingCart";
 import Footer from "./components/Footer/Footer";
+import Search from "./views/Search/Search";
 
 function App() {
-
   return (
     <>
-    
       <Header />
       <main className="mt-16 lg:mt-20">
         <Routes>
@@ -25,11 +24,12 @@ function App() {
             <Route path="/decorative_plants" element={<DecorativePlants/>}/>
             <Route path="/detail/:id"  element={<Detail/>}/>
             <Route path="/cart"  element={<ShoppingCart/>}/>
+          <Route path="/test" element={<Search />} />
         </Routes>
       </main>
       <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
