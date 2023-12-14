@@ -1,9 +1,9 @@
 import React from "react";
 import PlantsCard from "../../components/PlantsCard/PlantsCard";
-import { BsArrow90DegLeft, BsChat, BsDashLg } from "react-icons/bs";
+import { BsArrow90DegLeft, BsChat } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-const Category = () => {
+const IndoorPlants = () => {
   const plantsData = [
     {
       id: 1,
@@ -64,10 +64,10 @@ const Category = () => {
   ];
 
   return (
-    <div className="bg-green-800 pt-16 max-w-full ">
+    <div className="max-w-full ">
       <div className="flex flex-col justify-center items-center bg-white max-w-full max-h-auto pt-10 pb-10">
         <h1 className="text-center font-sans font-semibold text-2xl md:text-4xl p-4">
-          Bienvenidos a la sección – Plantas de interior
+          Bienvenidos a la sección – Plantas de interior.
         </h1>
         <h2 className="text-center font-sans text-sm md:text-2xl p-4 md:pl-16 md:pr-16 ">
           Especial para hogar o negocios en espacios cerrados, brindamos
@@ -109,4 +109,4 @@ const Category = () => {
   );
 };
 
-export default Category;
+export default IndoorPlants;
